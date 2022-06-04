@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  ruby26:
+    container_name: ruby26
+    build:
+      context: ./ruby26/
+    volumes:
+      - ./app:/app
+    ports:
+      - "3000:3000"
+    tty: true
+
+  ruby27:
+    container_name: ruby27
+    build:
+      context: ./ruby27/
+    volumes:
+      - ./app:/app
+    ports:
+      - "3100:3000"
+    tty: true
